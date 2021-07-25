@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #168877;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(247, 141, 141);
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+  display: inline-block;
+  border: none;
+  font-size: 45px;
+  color: #012016;
+  background-color: rgb(243, 167, 167);
+  transition: all 0.35s;
+  margin: 2rem;
+  font-family: "Amatic SC", cursive;
+  padding: 2px;
+  position: relative;
+  width: 4em;
+  height: 1.5em;
+}
+
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
+  transform: scale(1);
+  background-color: rgb(2, 73, 51);
+  color: #f39c8a;
+}
+
+.score {
+  background: rgba(7, 97, 85, 0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 3rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url("mole.svg") bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
