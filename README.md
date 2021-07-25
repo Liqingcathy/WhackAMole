@@ -1,1 +1,1 @@
-# WhackAMole
+# WhackAMole Game
